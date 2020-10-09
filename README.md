@@ -20,6 +20,8 @@ You can then open <http://localhost:8080> in multiple tabs to see live chat work
 
 ## Key things
 
+Both server and client have `.on` and `.emit` events. 1st parameter is the name of the listener. 2nd parameter contains the data (a JSON object for `.emit`, and a `function(data)` for `.on`). There's `io.sockets.emit` ("send to all") and `socket.broadcast.emit` ("send to all others").
+
 ### Server
 
 ```js
