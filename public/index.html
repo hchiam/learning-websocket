@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Websocket demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/hchiam/css-boilerplate@3.1.0/style.css"
+      integrity="sha384-PIQTnYPOmVl23TkdXfG1iXwisbGdiwDbbPA1XSU+bBJ2DIPCsD24fHmm/vH4k3Q3"
+      crossorigin="anonymous"
+    />
+    <style>
+      button:disabled,
+      input:disabled,
+      button:disabled:hover,
+      input:disabled:hover {
+        background: #333;
+        color: grey;
+        box-shadow: none;
+      }
+    </style>
+
+    <!-- need to connect client to sockets: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+  </head>
+  <body>
+    <h1>Hi there!</h1>
+
+    <div class="container">
+      <div id="chat-window">
+        <div id="output"></div>
+        <div id="answer"></div>
+      </div>
+      <input id="name" type="text" placeholder="Name" autofocus />
+      <input id="message" type="text" placeholder="Message" disabled />
+      <button id="send" type="submit" name="action" disabled="true">
+        Send
+      </button>
+    </div>
+
+    <script src="/chat.js"></script>
+  </body>
+</html>

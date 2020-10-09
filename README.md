@@ -2,14 +2,28 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-Links to learn from:
+## Super quick demo setup
+
+Triple-click to select the whole command below: (and copy it into CLI and run it)
+
+```bash
+git clone https://github.com/hchiam/learning-websocket.git && cd learning-websocket && yarn && open http://localhost:8080 && nodemon
+```
+
+Or if you don't have [`yarn`](https://github.com/hchiam/learning-yarn) installed:
+
+```bash
+git clone https://github.com/hchiam/learning-websocket.git && cd learning-websocket && npm install && open http://localhost:8080 && nodemon
+```
+
+## Medium tutorial
+
+<https://medium.com/@tfarguts/websockets-for-beginners-part-2-9a1970a1c228>
+
+## More links to learn from
 
 <https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API>
 
 <https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications>
 
 <https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers>
-
-Or use this:
-
-<https://github.com/websockets/ws>
