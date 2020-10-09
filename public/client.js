@@ -22,13 +22,13 @@ message.addEventListener("keyup", toggleSendButton);
 
 sendButton.addEventListener("click", () => {
   const data = { message: message.value, name: name.value };
-  socket.emit("message", data);
+  socket.emit("toServer-message", data);
   message.value = "";
   message.focus();
 });
 
 message.addEventListener("keyup", () => {
-  socket.emit("typing", { name: name.value });
+  socket.emit("toServer-typing", { name: name.value });
 });
 
 function toggleSendButton() {
@@ -40,13 +40,13 @@ function toggleSendButton() {
 }
 
 // send "message" to server:
-socket.on("message", (data) => {
+socket.on("toClient-message", (data) => {
   answer.innerHTML = "";
   output.innerHTML += `<p><strong>${data.name}: </strong>${data.message}</p>`;
 });
 
 // send "typing" to server:
-socket.on("typing", (data) => {
+socket.on("toClient-typing", (data) => {
   const whoElement = data.name ? `<em>${data.name}</em>` : "Someone";
   answer.innerHTML = `<p>${whoElement} is typing...</p>`;
 });

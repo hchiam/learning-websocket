@@ -18,6 +18,39 @@ git clone https://github.com/hchiam/learning-websocket.git && cd learning-websoc
 
 You can then open <http://localhost:8080> in multiple tabs to see live chat working locally in localhost.
 
+## Key things
+
+### Server
+
+```js
+const io = socket(server);
+
+io.on("connection", (socket) => {
+  socket.on("some-server-listener-1", (data) => {
+    // send message data to all clients:
+    io.sockets.emit("client-listener-1", data);
+
+    // send typing data to all clients except sender client that triggered this listener:
+    socket.broadcast.emit("client-listener-2", data);
+
+    socket.on("disconnect", (socket) => {
+      console.log(`A client socket disconnected.`);
+    });
+  });
+});
+```
+
+### Client
+
+```js
+const socket = io(window.location.origin);
+
+socket.emit("some-server-listener-1", data);
+socket.on("client-listener-2", (data) => {
+  // ...
+});
+```
+
 ## Medium tutorial
 
 <https://medium.com/@tfarguts/websockets-for-beginners-part-2-9a1970a1c228>
