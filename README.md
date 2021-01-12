@@ -59,6 +59,8 @@ socket.on("client-listener-2", (data) => {
 
 ## More links to learn from
 
+"WebSockets in 100 seconds": <https://www.youtube.com/watch?v=1BfCnjr_Vjg>
+
 <https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API>
 
 <https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications>
