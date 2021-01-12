@@ -59,7 +59,7 @@ socket.on("client-listener-2", (data) => {
 
 ## More links to learn from
 
-"WebSockets in 100 seconds": <https://www.youtube.com/watch?v=1BfCnjr_Vjg>
+"WebSockets in 100 seconds": <https://www.youtube.com/watch?v=1BfCnjr_Vjg> (and socket.io and beyond: WebRTC and WebTransport)
 
 <https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API>
 
